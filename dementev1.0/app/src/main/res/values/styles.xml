@@ -16,4 +16,66 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+
+    <!-- ................ PARA TABLERO PRINCIPAL ..................... -->
+    <style name="LevelText" parent="TextAppearance.AppCompat">
+        <item name="android:background">@drawable/shape_text_level</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+
+    <style name="ButtonLevelCurrent" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/current_level</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="ButtonLevelBlocked" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/blocked_level</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="ButtonLevelCompleted" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/completed_level</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+
+    <!-- ................ PARA PANTALLA CONTENIDO ..................... -->
+
+    <!-- ................ TABLERO PRINCIPAL DIFERENTES PANTALLAS ..................... -->
+    <style name="ButtonLevelCurrentsw600dp" parent="ButtonLevelCurrent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:paddingTop">80dp</item>
+    </style>
+    <style name="ButtonLevelBlockedsw600dp" parent="ButtonLevelBlocked">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">130dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:paddingTop">15dp</item>
+    </style>
+    <style name="ButtonLevelCompletedsw600dp" parent="ButtonLevelCompleted">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">135dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:paddingTop">15dp</item>
+    </style>
+
+    <style name="LevelTextsw320" parent="LevelText">
+        <item name="android:textSize">13dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+    </style>
+
+
 </resources>

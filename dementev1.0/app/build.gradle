@@ -12,6 +12,13 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // ... Esquema de base de datos ......
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
     }
 
     buildTypes {
@@ -23,6 +30,13 @@ android {
 }
 
 dependencies {
+    implementation 'org.jetbrains:annotations-java5:15.0'
+
+
+    // ... Versiones de las librerias ......
+    def room_version = "2.2.5"
+
+    // ... Dependencias del proyecto ......
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.1.0'
@@ -33,4 +47,12 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    // ... Otras dependencias ......
+
+    // ... Videos con fondo transparente.
+    implementation 'com.alphamovie.library:alpha-movie:1.2.1'
+
+    // ... ORM SQLite Room
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
 }
