@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="co.demente">
 
+
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,17 +14,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ContenidoActivity"
-            android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:noHistory="true"/>
+<!--
+        <receiver
+            android:name=".negocio.services.NotificacionAlarmService"
+            android:process=":remote">
+
+        </receiver>
+        -->
+
+        <receiver android:name=".negocio.services.NotificacionAlarmService">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".negocio.services.ServiceNotification"
+            android:enabled="true"
+            android:process=":your_service"></service>
+
 
         <activity
-            android:name=".LoginActivity"
-            android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:noHistory="true"/>
-
+            android:name=".MainActivity"
+            android:screenOrientation="landscape"></activity>
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="landscape"
@@ -31,12 +47,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

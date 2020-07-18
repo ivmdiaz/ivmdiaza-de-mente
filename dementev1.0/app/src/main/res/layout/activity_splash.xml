@@ -1,30 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity"
-    android:background="@color/colorPrimaryDark">
+    tools:context=".SplashActivity">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/background_image_splash"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="10px"
-        android:background="#fff">
+        android:scaleType="centerCrop" />
 
-        <TextView
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/splash_avatar_width"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/popup_settings_sound_image_size"
+        card_view:cardCornerRadius="20sp"
+        card_view:cardElevation="20sp"
+        card_view:contentPadding="20dp">
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="VENTANA DE CARGA"
+            android:background="@color/colorPrimary"
             android:gravity="center"
-            android:textSize="100dp">
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_text_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/popup_settings_sound_image_size"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:shadowColor="#2eaed9"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="4"
+                android:text="De-Mente"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/popup_avatar_title_text_size" />
+
+            <ImageView
+                android:id="@+id/avatar_splash"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/title_text_avatar"
+                android:layout_marginBottom="@dimen/popup_settings_sound_image_size"
+                android:src="@drawable/splash_avatar" />
+
+            <LinearLayout
+                android:id="@+id/footer_splash"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/popup_settings_sound_image_size"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:gravity="center"
+
+                    android:shadowColor="#2eaed9"
+                    android:shadowDx="4"
+                    android:shadowDy="4"
+                    android:shadowRadius="4"
+                    android:text="Iván Mauricio Díaz Aranda"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/popup_avatar_title_text_size" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/login_form_padding"
+        android:textSize="20sp"
+        android:textAlignment="textEnd"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true"
+        android:text="@string/copyright" />
 
 
-
-        </TextView>
-
-
-    </LinearLayout>
 </RelativeLayout>

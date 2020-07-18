@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Splash -->
+    <dimen name="splash_avatar_width">700dp</dimen>
+
+    <!--Login -->
+    <dimen name="login_avatar_width">400dp</dimen>
+    <dimen name="login_form_padding">15dp</dimen>
+
+    <!-- settings popup -->
+    <dimen name="popup_settings_width">400dp</dimen>
+    <dimen name="popup_settings_height">250dp</dimen>
+    <dimen name="popup_settings_sound_image_size">65dp</dimen>
+    <dimen name="popup_settings_sound_text_size">25dp</dimen>
+    <dimen name="popup_settings_padding_top">68dp</dimen>
+    <dimen name="popup_settings_padding_left">30dp</dimen>
+
+    <!-- settings popup -->
+    <dimen name="popup_avatar_width">600dp</dimen>
+    <dimen name="popup_avatar_height">800dp</dimen>
+    <dimen name="popup_avatar_title_text_height">55dp</dimen>
+    <dimen name="popup_avatar_title_text_size">30dp</dimen>
+    <dimen name="popup_avatar_exit_button">70dp</dimen>
+    <dimen name="popup_avatar_cancel_button_size">20dp</dimen>
+
+    <!-- difficulty level -->
+    <dimen name="difficulty_padding">40dp</dimen>
+    <dimen name="difficulty_margin">15dp</dimen>
+    <dimen name="difficulty_margin_top">30dp</dimen>
+
+</resources>
